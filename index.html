@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1020"><meta name="description" content="Control local de inventario audiovisual, maletas y devoluciones.">
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css"><title>HOME — Control audiovisual</title>
+</head>
+<body>
+<header class="topbar"><div class="brand"><div class="brand-mark">H</div><div><div class="brand-name">HOME</div><div class="brand-sub">AUDIOVISUAL CHECKOUT</div></div></div><button id="quickAdd" class="primary small">+ Añadir equipo</button></header>
+<main id="app">
+<section class="view active" id="view-home">
+<div class="hero"><div class="eyebrow">CONTROL DE EQUIPO</div><h1>Todo vuelve<br><span>a casa.</span></h1><p>Tu inventario, tus maletas y cada devolución bajo control. También sin conexión.</p><button class="primary" id="newShootHero">＋ Crear rodaje</button></div>
+<div class="stats-grid"><article class="stat"><span>Equipos registrados</span><strong id="statItems">0</strong></article><article class="stat"><span>Unidades en inventario</span><strong id="statUnits">0</strong></article><article class="stat"><span>Rodajes activos</span><strong id="statActive">0</strong></article><article class="stat"><span>Incidencias abiertas</span><strong id="statIssues">0</strong></article></div>
+<div class="section-head"><div><div class="eyebrow">SEGUIMIENTO</div><h2>Rodajes recientes</h2></div><button class="text-btn" data-go="history">Ver historial →</button></div><div id="homeRecent" class="stack empty-state">Todavía no hay rodajes. Crea uno para empezar.</div>
+<div class="notice"><span class="notice-icon">↳</span><div><b>Los datos se guardan en este dispositivo.</b><p>Haz copias de seguridad regularmente desde Ajustes para proteger tu inventario y fotografías.</p></div></div>
+</section>
+<section class="view" id="view-inventory"><div class="page-head"><div><div class="eyebrow">TU EQUIPO</div><h1>Inventario</h1><p>Todo lo que posees, alquilas o te prestan.</p></div><button class="primary" id="addItemBtn">＋ Añadir</button></div>
+<div class="toolbar"><input id="inventorySearch" placeholder="Buscar equipo, marca o modelo…"><select id="categoryFilter"><option value="">Todas las categorías</option></select></div><div class="chip-row" id="ownershipFilters"><button class="chip selected" data-own="">Todo</button><button class="chip" data-own="Propio">Propio</button><button class="chip" data-own="Alquilado">Alquilado</button><button class="chip" data-own="Prestado">Prestado</button></div><div id="inventoryList" class="stack empty-state">Tu inventario aparecerá aquí.</div>
+</section>
+<section class="view" id="view-cases"><div class="page-head"><div><div class="eyebrow">PREPARACIÓN</div><h1>Maletas</h1><p>Prepara cada rodaje y reutiliza configuraciones.</p></div><button class="primary" id="newShootBtn">＋ Nuevo rodaje</button></div><div class="subnav"><button class="subtab selected" data-tab="active">Rodajes activos</button><button class="subtab" data-tab="templates">Plantillas</button></div><div id="shootList" class="stack empty-state"></div><div id="templateList" class="stack hidden empty-state"></div></section>
+<section class="view" id="view-history"><div class="page-head"><div><div class="eyebrow">REGISTRO</div><h1>Historial</h1><p>Revisa devoluciones cerradas y sus incidencias.</p></div><button class="secondary" id="exportHistoryBtn">Exportar PDF</button></div><div id="historyList" class="stack empty-state">Los rodajes cerrados aparecerán aquí.</div></section>
+<section class="view" id="view-settings"><div class="page-head"><div><div class="eyebrow">DATOS Y PREFERENCIAS</div><h1>Ajustes</h1><p>Tu información se queda en tu dispositivo.</p></div></div>
+<div class="settings-card"><h3>Copias de seguridad</h3><p>Exporta inventario, rodajes, plantillas y fotos en un archivo JSON. Usa ese archivo para restaurar los datos en otro dispositivo.</p><div class="button-row"><button class="primary" id="backupBtn">Descargar copia</button><label class="secondary file-label">Restaurar copia<input type="file" id="restoreFile" accept=".json,application/json" hidden></label></div><p class="micro">Al restaurar, puedes reemplazar los datos actuales o combinarlos. Guarda tu archivo de copia en un lugar seguro.</p></div>
+<div class="settings-card"><h3>Datos locales</h3><p id="storageSummary">Calculando datos…</p><button class="danger-outline" id="clearDataBtn">Borrar todos los datos</button><p class="micro">Esta acción no se puede deshacer. Exporta una copia antes de continuar.</p></div>
+<div class="settings-card"><h3>Acerca de HOME</h3><p>Versión 1.0 · Aplicación local para control de equipo audiovisual. Diseñada para funcionar offline después de la primera carga desde un servidor HTTPS o localhost.</p></div>
+</section>
+</main>
+<nav class="bottom-nav"><button class="nav-item active" data-go="home"><span>⌂</span>Inicio</button><button class="nav-item" data-go="inventory"><span>▦</span>Inventario</button><button class="nav-item" data-go="cases"><span>▣</span>Maletas</button><button class="nav-item" data-go="history"><span>◷</span>Historial</button><button class="nav-item" data-go="settings"><span>⚙</span>Ajustes</button></nav>
+<div id="modalRoot"></div><div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body></html>
