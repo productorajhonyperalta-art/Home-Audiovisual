@@ -149,3 +149,37 @@
   object-position: 50% 50% !important;
   transform: none !important;
 }
+
+
+/* HOME: centrado real de miniaturas en la lista por categorías de "Añadir maleta".
+   Afecta solo al selector de equipos dentro de cada editor de maleta. */
+.case-editor .case-category .case-item-grid .case-item-card .case-item-photo {
+  position: relative !important;
+  width: 54px !important;
+  height: 54px !important;
+  min-width: 54px !important;
+  min-height: 54px !important;
+  flex: 0 0 54px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: block !important;
+}
+.case-editor .case-category .case-item-grid .case-item-card .case-item-photo > img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: 50% 50% !important;
+  transform: none !important;
+}
