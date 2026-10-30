@@ -100,3 +100,31 @@
 .photo-tools .file-label{position:relative;overflow:hidden;gap:6px;white-space:normal;text-align:center}
 .photo-tools .file-label input[type="file"]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
 .item-main .thumb img{object-position:50% 50%!important}
+
+/* Corrección específica: miniaturas de la lista principal del inventario */
+#inventoryList .item-card .item-top > .thumb.photo-zoom {
+  position: relative !important;
+  display: block !important;
+  flex: 0 0 60px !important;
+  width: 60px !important;
+  height: 60px !important;
+  min-width: 60px !important;
+  min-height: 60px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  aspect-ratio: 1 / 1 !important;
+}
+#inventoryList .item-card .item-top > .thumb.photo-zoom img {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+}
