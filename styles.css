@@ -149,35 +149,3 @@
   object-position: 50% 50% !important;
   transform: none !important;
 }
-
-
-/* FIX DEFINITIVO: selector de equipos en Preparar rodaje / agregar equipos a maleta.
-   Limitar el ajuste a la miniatura del selector, sin afectar la lista principal del inventario. */
-.case-item-card > .case-item-photo {
-  position: relative !important;
-  display: block !important;
-  flex: 0 0 54px !important;
-  width: 54px !important;
-  height: 54px !important;
-  min-width: 54px !important;
-  min-height: 54px !important;
-  padding: 0 !important;
-  overflow: hidden !important;
-  align-self: center !important;
-}
-.case-item-card > .case-item-photo > img {
-  position: absolute !important;
-  inset: 0 !important;
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  min-width: 100% !important;
-  min-height: 100% !important;
-  max-width: none !important;
-  max-height: none !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  object-fit: cover !important;
-  object-position: 50% 50% !important;
-  transform: none !important;
-}
