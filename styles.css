@@ -128,3 +128,24 @@
   object-fit: cover !important;
   object-position: center center !important;
 }
+
+
+/* HOME fix v2: centrar el recorte únicamente en las miniaturas de la lista del inventario */
+#inventoryList .item-card .item-top > button.thumb.photo-zoom {
+  overflow: hidden !important;
+  position: relative !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+}
+#inventoryList .item-card .item-top > button.thumb.photo-zoom > img {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: 50% 50% !important;
+  transform: none !important;
+}
