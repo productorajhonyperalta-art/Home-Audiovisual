@@ -47,3 +47,33 @@
 .photo-preview-dialog img{display:block;max-width:100%;max-height:calc(88dvh - 40px);width:auto;height:auto;object-fit:contain;object-position:center;border-radius:8px;}
 .photo-preview-close{position:absolute;top:8px;right:8px;width:34px;height:34px;border:1px solid var(--line);border-radius:9px;background:#202b40;color:var(--text);font-size:17px;z-index:1;}
 @media(max-width:480px){.photo-preview-overlay{padding:8px}.photo-preview-dialog{padding:42px 6px 6px;border-radius:12px}.photo-preview-dialog img{max-height:84dvh;}}
+
+
+/* Previsualización compacta y miniaturas centradas de forma consistente */
+.thumb img,
+.case-item-photo img,
+.selected-item-photo,
+.check-photo img {
+  object-fit: cover !important;
+  object-position: center center !important;
+}
+.case-item-photo-zoom { cursor: zoom-in; }
+.photo-preview-dialog {
+  width: min(50vw, 600px);
+  max-width: 50vw;
+  max-height: 50vh;
+  padding: 36px 8px 8px;
+}
+.photo-preview-dialog img {
+  max-width: 100%;
+  max-height: calc(50vh - 48px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+}
+@media (max-width: 480px) {
+  .photo-preview-overlay { padding: 8px; }
+  .photo-preview-dialog { width: 50vw; max-width: 50vw; max-height: 50vh; padding: 34px 5px 5px; }
+  .photo-preview-dialog img { max-width: 100%; max-height: calc(50vh - 42px); }
+}
