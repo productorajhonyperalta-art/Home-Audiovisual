@@ -8,3 +8,28 @@
 
 /* Aviso visual: equipo ya asignado a otra maleta. Es informativo y no bloquea la selección. */
 .case-item-already{display:block;margin-top:3px;padding:4px 6px;border-radius:6px;background:#3a2d1a;color:#ffd28a;font-size:9px;line-height:1.35;font-weight:700;overflow-wrap:anywhere}.case-item-already[hidden]{display:none!important}.case-item-card.in-other-case{border-style:dashed;border-color:#8a6b39}.danger-outline{white-space:normal}
+
+/* Actualización: checklist compacto y fotografías centradas con vista ampliada */
+.thumb{padding:0;border:0;cursor:pointer;overflow:hidden;}
+.thumb img,.case-item-photo img,.selected-item-photo,.check-photo img{object-fit:cover;object-position:50% 50%;}
+.photo-zoom{cursor:zoom-in;}
+.photo-zoom:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.check-row{display:block;padding:12px 0;border-top:1px solid #ffffff0b;}
+.check-main{display:flex;flex-direction:column;gap:8px;min-width:0;}
+.check-item-head{display:flex;align-items:center;gap:10px;min-width:0;}
+.check-photo{display:block;width:48px;height:48px;flex:0 0 48px;border:0;padding:0;border-radius:9px;overflow:hidden;background:#202a3b;}
+.check-photo img{width:100%;height:100%;display:block;}
+.check-photo-empty{display:grid;place-items:center;color:var(--muted);font-size:20px;}
+.check-item-title{min-width:0;flex:1;}
+.check-name{font-size:12px;font-weight:700;overflow-wrap:anywhere;}
+.check-meta{font-size:10px;color:var(--muted);margin-top:3px;}
+.status-row{display:flex;flex-wrap:nowrap;gap:5px;margin-top:0;width:100%;}
+.status-btn{flex:1;min-width:0;padding:8px 3px;font-size:clamp(8px,2.4vw,10px);white-space:nowrap;}
+.check-bottom{display:flex;align-items:center;gap:8px;min-width:0;}
+.check-bottom .qty-controls{justify-content:flex-start;flex:0 0 auto;gap:5px;}
+.qty-controls label{display:flex;align-items:center;gap:3px;font-size:10px;color:var(--muted);}
+.qty-controls input{width:42px;padding:7px 3px;}
+.check-bottom .entry-observation{flex:1;min-width:0;width:100%;}
+.photo-lightbox{display:flex;align-items:center;justify-content:center;background:#080d16;border:1px solid var(--line);border-radius:14px;padding:8px;min-height:180px;max-height:70vh;overflow:hidden;}
+.photo-lightbox img{display:block;max-width:100%;max-height:65vh;width:auto;height:auto;object-fit:contain;object-position:center;border-radius:8px;}
+@media(max-width:380px){.status-row{gap:3px}.status-btn{font-size:8px;padding:8px 2px}.check-bottom{align-items:stretch;flex-direction:column}.check-bottom .qty-controls{justify-content:flex-start}.check-bottom .entry-observation{width:100%;}}
