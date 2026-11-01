@@ -183,3 +183,7 @@
   object-position: 50% 50% !important;
   transform: none !important;
 }
+
+
+/* Créditos y apoyo voluntario de HOME */
+.credits-links{display:flex;flex-wrap:wrap;margin:12px 0 20px}.credits-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:10px 13px;color:var(--text);background:#1b2639;font-size:12px}.credits-support{margin-top:18px;padding:18px 14px;border:1px solid var(--line);border-radius:14px;background:#0c1321}.credits-support h3{text-align:center;margin-bottom:8px}.credits-support p{text-align:center}.yape-qr-wrap{display:flex;justify-content:center;margin:16px 0}.yape-qr-placeholder{width:180px;height:180px;border-radius:12px;background:#fff;color:#552064;display:flex;flex-direction:column;align-items:center;justify-content:center;border:10px solid #fff;outline:1px solid #ddd}.yape-qr-placeholder span{font-size:42px;font-weight:800;letter-spacing:4px}.yape-qr-placeholder small{font-size:16px;font-weight:700}.credits-signature{text-align:center;margin-top:18px}
