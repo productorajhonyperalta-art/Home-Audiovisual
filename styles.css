@@ -185,5 +185,7 @@
 }
 
 
-/* Créditos y apoyo voluntario de HOME */
-.credits-links{display:flex;flex-wrap:wrap;margin:12px 0 20px}.credits-link{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:10px 13px;color:var(--text);background:#1b2639;font-size:12px}.credits-support{margin-top:18px;padding:18px 14px;border:1px solid var(--line);border-radius:14px;background:#0c1321}.credits-support h3{text-align:center;margin-bottom:8px}.credits-support p{text-align:center}.yape-qr-wrap{display:flex;justify-content:center;margin:16px 0}.yape-qr-image{display:block;width:180px;height:180px;object-fit:contain;border-radius:12px;background:#fff;border:8px solid #fff;outline:1px solid #ddd}.yape-qr-placeholder span{font-size:42px;font-weight:800;letter-spacing:4px}.yape-qr-placeholder small{font-size:16px;font-weight:700}.credits-signature{text-align:center;margin-top:18px}
+
+
+/* Créditos HOME: diseño compacto y adaptable a móviles */
+.credits-card{min-width:0;overflow:hidden}.credits-card>p{line-height:1.5}.credits-link{box-sizing:border-box;max-width:100%;width:max-content;overflow-wrap:anywhere;margin:8px 0 12px}.credits-support{box-sizing:border-box;width:100%;min-width:0;margin-top:12px;padding:14px 12px;border:1px solid var(--line);border-radius:14px;background:#0c1321}.credits-support h3{text-align:center;margin:0 0 8px}.credits-support p{text-align:center;overflow-wrap:anywhere}.yape-qr-wrap{display:flex;justify-content:center;width:100%;margin:12px 0}.yape-qr-image{display:block;box-sizing:border-box;width:min(180px,100%);height:auto;aspect-ratio:1;object-fit:contain;border-radius:12px;background:#fff;padding:6px}.credits-signature{text-align:center;margin-top:14px}@media(max-width:480px){.credits-card{padding:14px}.credits-support{padding:12px 10px}.credits-card p{font-size:13px}.yape-qr-image{width:min(160px,100%)}}
